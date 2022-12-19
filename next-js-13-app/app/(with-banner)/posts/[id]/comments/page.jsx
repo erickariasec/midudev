@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const fetchComments = async (id) => {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
@@ -17,6 +19,12 @@ export default async function Comments({ params }) {
     <ul style={{ background: "#444", fontSize: "12px" }}>
       {comments.map((comment) => (
         <li key={comment.id}>
+          <Image
+            alt={comment.name}
+            src={`https://avatars.dicebear.com/api/pixel-art-neutral/${comment.email}.svg`}
+            width={50}
+            height={50}
+          />
           <h2>{comment.name}</h2>
           <p>{comment.body}</p>
         </li>
