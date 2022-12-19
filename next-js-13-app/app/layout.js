@@ -1,6 +1,7 @@
-import Head from "next/head";
-import "../styles/globals.css"
+import "../styles/globals.css";
 import { Navigation } from "./components/Navigation";
+import Head from "next/head";
+import { font } from "./font";
 
 export default function RootLayout({ children }) {
   return (
@@ -8,7 +9,7 @@ export default function RootLayout({ children }) {
       <Head>
         <title>My first app with Next 13</title>
       </Head>
-      <body>
+      <body className={font.variable}>
         <Navigation />
         {children}
       </body>
