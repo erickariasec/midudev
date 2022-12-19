@@ -1,12 +1,13 @@
+import Head from "next/head";
 import "../styles/globals.css"
 import { Navigation } from "./components/Navigation";
 
 export default function RootLayout({ children }) {
   return (
     <html>
-      <head>
+      <Head>
         <title>My first app with Next 13</title>
-      </head>
+      </Head>
       <body>
         <Navigation />
         {children}
